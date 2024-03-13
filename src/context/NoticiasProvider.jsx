@@ -7,6 +7,8 @@ export const NoticiasProvider = ({ children }) => {
 
   const [categoria, setCategoria] = useState("general")
   const [noticias, setNoticias] = useState([])
+  const [pagina, setPagina] = useState(1)
+  const [totalNoticias, setTotalNoticias] = useState(0)
 
   useEffect(() => {
     
@@ -15,7 +17,9 @@ export const NoticiasProvider = ({ children }) => {
       const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${categoria}&apiKey=${apiKey}`
 
       const { data } = await axios(url)
+
       setNoticias(data.articles)
+      setTotalNoticias(data.totalResults)
     }
     consultarAPI()
   }, [categoria]);
