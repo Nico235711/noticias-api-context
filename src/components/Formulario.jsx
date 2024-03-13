@@ -1,6 +1,4 @@
 import {
-  Box,
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
@@ -42,12 +40,6 @@ const Formulario = () => {
             ))
           }
         </Select>
-
-        <Box sx={{
-          marginTop: 1
-        }}>
-          <Button variant="contained" fullWidth>Buscar Noticias</Button>
-        </Box>
       </FormControl>
     </form>
   )

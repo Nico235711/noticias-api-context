@@ -18,7 +18,7 @@ const ListadoNoticias = () => {
         Últimas Noticas
       </Typography>
       
-      <Grid>
+      <Grid container spacing={3}>
         {
           noticias?.map(noticia => (
             <Noticia noticia={noticia} key={noticia.url} />
