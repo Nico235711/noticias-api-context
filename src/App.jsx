@@ -1,10 +1,15 @@
+import { Container, Typography } from "@mui/material"
 
 function App() {
 
   return (
-    <>
-      <h1>Desde App</h1>
-    </>
+    <Container>
+      <header>
+        <Typography align="center" marginY={5} variant="h3" component="h1">
+          Buscador de Noticias
+        </Typography>
+      </header>
+    </Container>
   )
 }
 
