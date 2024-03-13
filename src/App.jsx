@@ -1,4 +1,5 @@
-import { Container, Typography } from "@mui/material"
+import { Container, Grid, Typography } from "@mui/material"
+import Formulario from "./components/Formulario"
 
 function App() {
 
@@ -9,6 +10,17 @@ function App() {
           Buscador de Noticias
         </Typography>
       </header>
+
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item xs={12} md={6}>
+          <Formulario />
+        </Grid>
+      </Grid>
     </Container>
   )
 }
